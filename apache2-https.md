@@ -5,11 +5,11 @@ Prèrequis avoir un nom de domaine et pouvoir changer son DNS (pour moi : cloudf
 
 	
 ## Configuration DNS
-'''
+''
 A / jbruneau.uk / 93.127.195.126
 ---
 CNAME / www / jbruneau.uk
-'''
+''
 
 ## Installation Apache2 et Certbot
 '''
