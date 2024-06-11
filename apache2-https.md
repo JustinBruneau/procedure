@@ -2,7 +2,7 @@
 
 Installation de Certbot, Apache2 pour Mettre un site en HTTPS
 Prè-requis avoir un nom de domaine et pouvoir changer son DNS (pour moi : cloudflare)
-
+PS : modifier les variable "example.com.conf", "example.com", "www.example.com"
 
 ## Etape 1 - Installation :
     sudo apt update
