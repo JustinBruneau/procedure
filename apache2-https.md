@@ -4,29 +4,12 @@ Installation de Certbot, Apache2 pour Mettre un site en HTTPS
 Prèrequis avoir un nom de domaine et pouvoir changer son DNS (pour moi : cloudflare)
 
 	
-## Configuration DNS
-'''
-A / jbruneau.uk / 93.127.195.126
----
-CNAME / www / jbruneau.uk
-'''
-
-## Installation Apache2 et Certbot
-'''
 sudo apt update
 sudo apt install apache2
 sudo apt install certbot python3-certbot-apache
-'''
-
-## Configuration Certbot
-'''
 sudo certbot --apache -d example.com -d www.exemple.com
-'''
-
-## Configuration Apache2
-'''
 sudo nano /etc/apache2/sites-available/example.com.conf
-'''
+
 '''
 <VirtualHost *:80>
     ServerName example.com
@@ -59,15 +42,8 @@ sudo nano /etc/apache2/sites-available/example.com.conf
 '''
 
 
-## Redémarage Apache2
-'''
 sudo a2enmod rewrite
 sudo a2enmod ssl
 sudo a2ensite example.com
 sudo systemctl restart apache2
-'''
-
-## Rounouveler le certificat automatiquement
-'''
 sudo certbot renew --dry-run
-'''
